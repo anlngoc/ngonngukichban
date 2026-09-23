@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mỹ phẩm - Cosmetics Shop</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <main class="shop-container">
+    <aside class="sidebar">
+      <div class="sidebar-title">
+        <div class="heart">♥</div>
+        <span>MỸ PHẨM</span>
+      </div>
+
+      <nav class="category-list">
+        <% categories.forEach((category, index) => { %>
+          <a
+            href="/category/<%= encodeURIComponent(category) %>"
+            class="<%= (!selectedCategory && index === 0) || selectedCategory === category ? 'active' : '' %>"
+          >
+            <%= category %>
+          </a>
+        <% }) %>
+      </nav>
+    </aside>
+
+    <section class="products">
+      <% products.forEach(product => { %>
+        <article class="product-card">
+          <div class="badge"><%= product.badge %></div>
+
+          <div class="product-image">
+            <img src="<%= product.image %>" alt="<%= product.name %>">
+          </div>
+
+          <div class="product-info">
+            <h3><%= product.name %></h3>
+            <div class="price">
+              <span class="current"><%= product.price %></span>
+              <% if (product.oldPrice) { %>
+                <span class="old"><%= product.oldPrice %></span>
+              <% } %>
+            </div>
+          </div>
+        </article>
+      <% }) %>
+    </section>
+
+    <aside class="banner">
+      <img src="/images/banner.jpg" alt="Cosmetics Nature Products">
+    </aside>
+  </main>
+
+  <section class="brands">
+    <img src="/images/brands.jpg" alt="Brands">
+  </section>
+</body>
+</html>
