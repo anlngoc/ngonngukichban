@@ -10,7 +10,8 @@ EJS
 
 HTML/CSS
 
-Hình ảnh: (./Screenshot.png)
+Hình ảnh: ![Giao diện](./public/images/Screenshot.png)
+
 
 Chạy project
 npm install
