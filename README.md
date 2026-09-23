@@ -26,18 +26,3 @@ http://localhost:3000
 Trong quá trình code có thể dùng:
 
 npm run dev
-
-Cấu trúc
-cosmetics-nodejs/
-├── public/
-│   ├── css/
-│   │   └── style.css
-│   └── images/
-│       ├── banner.jpg
-│       ├── brands.jpg
-│       └── product1.jpg ... product6.jpg
-├── views/
-│   └── index.ejs
-├── package.json
-├── server.js
-└── README.md
